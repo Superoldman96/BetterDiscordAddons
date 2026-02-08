@@ -2,7 +2,7 @@
  * @name NotificationSounds
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 4.0.6
+ * @version 4.0.7
  * @description Allows you to replace the native Sounds with custom Sounds
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -503,7 +503,9 @@ module.exports = (_ => {
 														align: BDFDB.LibraryComponents.Flex.Align.CENTER,
 														children: n.label
 													}),
-													hint: n.hint,
+													icon: _ => BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.MenuItems.MenuHint, {
+														hint: n.hint
+													}),
 													id: BDFDB.ContextMenuUtils.createItemId(this.name, type, n.key),
 													checked: choices[type][n.key],
 													action: state => {
