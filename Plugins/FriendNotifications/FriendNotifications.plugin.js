@@ -898,7 +898,7 @@ module.exports = (_ => {
 									}
 								};
 								if ((loginNotice ? observedUsers[id].login : observedUsers[id][status.name]) == notificationTypes.DESKTOP.value) {
-									let desktopString = string.replace(/\$user/g, name).replace(/\$statusOld/g, oldStatusName).replace(/\$status/g, statusName);
+									let desktopString = string.replace(/\$user/g, name).replace(/\$nick/g, nickname ? nickname : !hasUserPlaceholder ? name : "").replace(/\$statusOld/g, oldStatusName).replace(/\$status/g, statusName);
 									if (status.activity) desktopString = desktopString.replace(/\$song|\$game/g, status.activity.name || status.activity.details || "").replace(/\$artist|\$custom/g, [status.activity.emoji && status.activity.emoji.name, status.activity.state].filter(n => n).join(" ") || "");
 									if (status.mobile) desktopString += " (mobile)";
 									let notificationSound = this.settings.notificationSounds["desktop" + status.name] || {};
