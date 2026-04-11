@@ -1615,10 +1615,12 @@ a.metadataDownload_cf09d8 {
 
 /* ----		10.11.		CHANGELOGMODAL					---- */
 
-#app-mount .improved__1689b {							/* modal				improved category						*/
+#app-mount .improved__1689b,
+#app-mount .bd-changelog-improved {							/* modal				improved category						*/
 	color: rgb(var(--accentcolor_v));
 }
-#app-mount .improved__1689b::after {
+#app-mount .improved__1689b::after,
+#app-mount .bd-changelog-improved::after {
 	background-color: rgb(var(--accentcolor_v));
 }
 
