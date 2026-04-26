@@ -1521,7 +1521,7 @@
 		"MessageToolbarExtras": {"props": ["hoverBarButton", "icon", "popover"]},
 		"MessageToolbarItems": {"props": ["wrapper", "button", "separator"]},
 		"Modal": {"props": ["root", "small", "medium"]},
-		"ModalCarouselNav": {"props": ["navPrev", "navNext", "slide"]},
+		"ModalCarouselNav": {"props": ["navPrev", "navNext", "obscure"]},
 		"ModalDivider": {"props": ["divider"], "length": 1},
 		"ModalLayer": {"props": ["layer", "hidden"]},
 		"ModalLayerBackdrop": {"props": ["backdrop", "withLayer"]},
