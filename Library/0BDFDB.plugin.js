@@ -4606,8 +4606,6 @@ module.exports = (_ => {
 				
 				const DiscordClasses = Object.assign({}, InternalData.DiscordClasses);
 				BDFDB.DiscordClasses = Object.assign({}, DiscordClasses);
-				console.log(DiscordClasses);
-				console.log(Internal.DiscordClassModules);
 				Internal.getDiscordClass = function (item, selector) {
 					let className, fallbackClassName, notFoundAndLazyloaded = false;
 					className = fallbackClassName = `${Internal.DiscordClassModules.BDFDB.BDFDBundefined}_${Internal.generateClassId()}`;
@@ -7175,9 +7173,9 @@ module.exports = (_ => {
 				
 				CustomComponents.Scrollers = new Proxy({}, {
 					get: function (_, item) {
-						if (item == "AUTO") return Internal.LibraryComponents.ScrollerBase(BDFDB.disCN.scrollerauto, BDFDB.disCN.scrollerfade, BDFDB.disCN.scrollercustomtheme);
-						else if (item == "Thin") return Internal.LibraryComponents.ScrollerBase(BDFDB.disCN.scrollerthin, BDFDB.disCN.scrollerfade, BDFDB.disCN.scrollercustomtheme);
-						else if (item == "None") return Internal.LibraryComponents.ScrollerBase(BDFDB.disCN.scrollernone, BDFDB.disCN.scrollerfade, BDFDB.disCN.scrollercustomtheme);
+						if (item == "AUTO") return BDFDB.ReactUtils.hookCall(Internal.LibraryComponents.ScrollerBase, [BDFDB.disCN.scrollerauto, BDFDB.disCN.scrollerfade, BDFDB.disCN.scrollercustomtheme]);
+						else if (item == "Thin") return BDFDB.ReactUtils.hookCall(Internal.LibraryComponents.ScrollerBase, [BDFDB.disCN.scrollerthin, BDFDB.disCN.scrollerfade, BDFDB.disCN.scrollercustomtheme]);
+						else if (item == "None") return BDFDB.ReactUtils.hookCall(Internal.LibraryComponents.ScrollerBase, [BDFDB.disCN.scrollernone, BDFDB.disCN.scrollerfade, BDFDB.disCN.scrollercustomtheme]);
 						else return "div";
 					}
 				});
