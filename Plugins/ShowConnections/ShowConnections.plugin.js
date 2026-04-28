@@ -2,7 +2,7 @@
  * @name ShowConnections
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.3.2
+ * @version 1.3.3
  * @description Shows the connected Accounts of a User in the UserPopout
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -253,14 +253,14 @@ module.exports = (_ => {
 			}
 
 			processUserHeaderUsername (e) {
-				let themeType = BDFDB.ObjectUtils.get(e.instance, "props.tags.props.themeType");
+				let themeType = BDFDB.ObjectUtils.get(e.instance, "props.trailing.props.themeType");
 				if (themeType != "SIDEBAR" && themeType != "POPOUT" || e.instance.props.className) return;
 				let user = e.instance.props.user || BDFDB.LibraryStores.UserStore.getUser(e.instance.props.userId);
 				if (!user || user.isNonUserBot()) return;
 				e.returnvalue = [e.returnvalue].flat(10);
 				e.returnvalue.push(BDFDB.ReactUtils.createElement(UserConnectionsComponents, {
 					user: user,
-					popoutColor: BDFDB.ObjectUtils.get(e.instance, "props.tags.props.displayProfile.themeColors.1"),
+					popoutColor: BDFDB.ObjectUtils.get(e.instance, "props.trailing.props.displayProfile.themeColors.1"),
 					theme: e.instance.props.theme
 				}, true));
 			}
