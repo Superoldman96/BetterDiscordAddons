@@ -413,6 +413,27 @@ img:not([src]), img[src=""], img[src="null"] {
 [REPLACE_CLASS_quickselectwrapper] {
 	margin-left: 12px;
 }
+[REPLACE_CLASS_quickselect] {
+	color: var(--text-subtle);
+	font-size: 14px;
+	line-height: 14px;
+}
+[REPLACE_CLASS_quickselectarrow] {
+	margin-top: 5px;
+	border: 5px transparent solid;
+	border-top: 7px currentColor solid;
+}
+[REPLACE_CLASS_quickselectclick] {
+	cursor: pointer;
+}
+[REPLACE_CLASS_quickselectlabel] {
+	font-weight: 600;
+}
+[REPLACE_CLASS_quickselectvalue] {
+	font-size: 12px;
+	font-weight: 500;
+	margin-right: 5px;
+}
 
 [REPLACE_CLASS_selectwrapper] {
 	display: flex;

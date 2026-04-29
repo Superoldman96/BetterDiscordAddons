@@ -36,6 +36,15 @@
 			"SUCCESS": "success"
 		},
 		"SEARCH_PAGE_SIZE": 25,
+		"StatusTypes": {
+			"ONLINE": "online",
+			"OFFLINE": "offline"
+			"idle": "idle",
+			"DND": "dnd",
+			"INVISIBLE": "invisible",
+			"STREAMING": "streaming",
+			"UNKNOWN": "unknown"
+		},
 		"ToastIcons": {
 			"info": "INFO",
 			"danger": "CLOSE_CIRCLE",
